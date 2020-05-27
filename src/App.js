@@ -14,7 +14,9 @@ class App extends Component {
   componentDidMount(){
     fetch('http://127.0.0.1:8000/restaurants/')
       .then(response => response.json())
-      .then(restaurants => this.setState({restaurants}))
+      .then(restaurants => {this.setState({restaurants})})
+      console.log(this.state.restaurants, "rests")
+      // console.log(restaurants)
   }
   render() {
     return (
